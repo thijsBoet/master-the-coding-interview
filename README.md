@@ -39,7 +39,7 @@ Ultimate coding interview bootcamp. Get more job offers, negotiate a raise: Ever
   * Go out for coffee with gatekeeper to pick their brain
   * Try to by-pass formalities to get your foot in the door
 
-*Hey $BOB,
+_Hey $BOB,
 I saw your presentation at $CONFERENCE last year on Youtube (rr point to some work they have done).
 Great stuff; loved what you did with $FOO, in particular
 $COMMENT_PROVING_YOU_KNOW_WHAT_YOU'RE_TALKING_ABOUT.
@@ -49,6 +49,6 @@ few minutes to chat on Thursday about what you guys are doing?
  
 Thanks,
 Yourname
-Your website or any public profile link*
+Your website or any public profile link_
 
 ## Big O Notation
