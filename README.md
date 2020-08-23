@@ -42,7 +42,6 @@ Ultimate coding interview bootcamp. Get more job offers, negotiate a raise: Ever
   * Try to by-pass formalities to get your foot in the door
 
 ## Big O Notation
-
 * Good code should be
   * Readable
   * Scalable
@@ -53,7 +52,8 @@ Big O allows us to measure how scalable our code is.
 * We can measure this in javascript with the performance.now() method
 
 ```javascript
-const nemo = ['nemo']
+const nemo = ['dory', 'bruce', 'nemo', 'marlin', 'gill', 'bloat', 'nigel', 'darla', 'hank'];
+const largeArray = new Array(1000).fill('nemo');
 
 function findNemo(array){
   let t0 = performance.now()
@@ -66,6 +66,19 @@ function findNemo(array){
   console.log(`Runtime findNemo took ${t1 - t0} milliseconds`)
 }
 
-findNemo(nemo)
-
+findNemo(nemo);
+findNemo(largeArray);
 ```
+
+## Big O's
+
+![big-O-complexity-chart](./img/big-O-complexity-chart.jpg)
+
+* O(1) Constant- no loops
+* O(log N) Logarithmic- usually searching algorithms have log n if they are sorted (Binary Search)
+* O(n) Linear- for loops, while loops through n items
+* O(n log(n)) Log Liniear- usually sorting operations
+* O(n^2) Quadratic- every element in a collection needs to be compared to ever other element. Two
+  nested loops
+* O(2^n) Exponential- recursive algorithms that solves a problem of size N
+* O(n!) Factorial- you are adding a loop for every element
