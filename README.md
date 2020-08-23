@@ -3,8 +3,6 @@ Ultimate coding interview bootcamp. Get more job offers, negotiate a raise: Ever
 
 [UDEMY](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
 
----
-
 ## Getting the interview
 * Resume
   * Use Keywords used in job requirements
@@ -66,21 +64,56 @@ function findNemo(array){
   console.log(`Runtime findNemo took ${t1 - t0} milliseconds`)
 }
 
-findNemo(nemo);
-findNemo(largeArray);
+findNemo(nemo); // O(n) -> Linear Time complexity
+findNemo(largeArray); // O(n) -> Linear Time complexity
 ```
 
-## Big O's
+## Big O Complexities / Algorithm efficiency
+<img src="./img/big-O-complexity-chart.jpeg" alt="Big O complexity Chart" style="float: left margin-right: 10px;" />
 
-<img src="./img/big-O-complexity-chart.jpeg"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
-
-* O(1) Constant- no loops
-* O(log N) Logarithmic- usually searching algorithms have log n if they are sorted (Binary Search)
-* O(n) Linear- for loops, while loops through n items
-* O(n log(n)) Log Liniear- usually sorting operations
-* O(n^2) Quadratic- every element in a collection needs to be compared to ever other element. Two
+* O(1) Constant - no loops
+  * No matter how much inputs are added, operations are kept constant
+```javascript
+const compressFirstBox = (boxes) => console.log(boxes[0]);
+```
+* O(log N) Logarithmic - usually searching algorithms have log n if they are sorted (Binary Search)
+* O(n) Linear - for loops, while loops through n items
+  * As the inputs increase, the operations increase linearly
+```javascript
+const findNemo = (array) => {
+  for(let i = 0; i< array.length; i++) {
+      if (array[i] === 'nemo'){
+          console.log('Found NEMO!')
+      }
+  }
+}
+```
+* O(n log(n)) Log Linear - usually sorting operations
+* O(n^2) Quadratic - every element in a collection needs to be compared to ever other element. Two
   nested loops
-* O(2^n) Exponential- recursive algorithms that solves a problem of size N
-* O(n!) Factorial- you are adding a loop for every element
+* O(2^n) Exponential - recursive algorithms that solves a problem of size N
+* O(n!) Factorial - you are adding a loop for every element
+
+Iterating through half a collection is still O(n)
+Two separate collections: O(a * b)
+
+## What can cause time in a function?
+Operations (+, -, *, /)
+Comparisons (<, >, ==)
+Looping (for, while)
+Outside Function call (function())
+
+## Rule Book
+* Rule 1: Always worst Case
+* Rule 2: Remove Constants
+* Rule 3: Different inputs should have different variables. O(a+b). A and B arrays nested would be
+O(a*b)
++ for steps in order
+* for nested steps
+* Rule 4: Drop Non-dominant terms
+
+## What causes Space complexity?-
+Variables
+Data Structures
+Function Call
+Allocations
