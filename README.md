@@ -72,7 +72,9 @@ findNemo(largeArray);
 
 ## Big O's
 
-![big-O-complexity-chart](./img/big-O-complexity-chart.jpg)
+<img src="./img/big-O-complexity-chart.jpeg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
 * O(1) Constant- no loops
 * O(log N) Logarithmic- usually searching algorithms have log n if they are sorted (Binary Search)
