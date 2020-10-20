@@ -89,8 +89,29 @@ const findNemo = (array) => {
 }
 ```
 * O(n log(n)) Log Linear - usually sorting operations
-* O(n^2) Quadratic - every element in a collection needs to be compared to ever other element. Two
+* O(n^2) Quadratic time (squared) - every element in a collection needs to be compared to ever other element. Two
   nested loops
+```javascript
+const boxes = [1,2,3,4,5];
+
+const logAllPairsOfArray = array => {
+  for (let i= 0; i < array.length; i++) {
+    for (let j= 0; j < array.length; j++) {
+      console.log(array[i], array[j]);
+    }
+  }
+}
+logAllPairsOfArray(boxes)
+
+const logAllPairsOfArray2 = boxes => {
+  boxes.forEach(firsBox => {
+    boxes.forEach(secondBox => {
+      console.log(firsBox, secondBox)
+    });
+  });
+}
+logAllPairsOfArray2(boxes)
+```
 * O(2^n) Exponential - recursive algorithms that solves a problem of size N
 * O(n!) Factorial - you are adding a loop for every element
 
@@ -104,13 +125,13 @@ Looping (for, while)
 Outside Function call (function())
 
 ## Rule Book
-* Rule 1: Always worst Case
-* Rule 2: Remove Constants
-* Rule 3: Different inputs should have different variables. O(a+b). A and B arrays nested would be
-O(a*b)
-+ for steps in order
-* for nested steps
-* Rule 4: Drop Non-dominant terms
+* Rule 1: Always worst case scenario
+  Heaviest calculation scenario counts as Big O
+* Rule 2: Remove all constants
+  O(1 + n/2 +100) === O(n)
+* Rule 3: Different inputs should have different variables. O(a+b) (+ for steps in order). 
+  A and B arrays nested would be O(a*b) (* for nested steps)
+* Rule 4: Drop Non-dominant terms O(n + n^2) === O(n^2)
 
 ## What causes Space complexity?-
 Variables
