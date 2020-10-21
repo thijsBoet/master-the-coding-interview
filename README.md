@@ -77,6 +77,7 @@ findNemo(largeArray); // O(n) -> Linear Time complexity
 const compressFirstBox = (boxes) => console.log(boxes[0]);
 ```
 * O(log N) Logarithmic - usually searching algorithms have log n if they are sorted (Binary Search)
+  
 * O(n) Linear - for loops, while loops through n items
   * As the inputs increase, the operations increase linearly
 ```javascript
@@ -88,7 +89,8 @@ const findNemo = (array) => {
   }
 }
 ```
-* O(n log(n)) Log Linear - usually sorting operations
+* O(n * (log(n)) Log Linear - usually sorting operations
+  
 * O(n^2) Quadratic time (squared) - every element in a collection needs to be compared to ever other element. Two
   nested loops
 ```javascript
@@ -101,19 +103,36 @@ const logAllPairsOfArray = array => {
     }
   }
 }
-logAllPairsOfArray(boxes)
+logAllPairsOfArray(boxes);
+```
 
-const logAllPairsOfArray2 = boxes => {
-  boxes.forEach(firsBox => {
+Three Nested loops would be O(n^3) etc. etc.
+```javascript
+const boxes = [1, 2, 3, 4, 5];
+const logAllPairsOfArray2 = (boxes) => {
+  boxes.forEach(firstBox => {
     boxes.forEach(secondBox => {
-      console.log(firsBox, secondBox)
+      boxes.forEach(thirdBox => {
+        console.log(firstBox, secondBox, thirdBox)
+      });
     });
   });
-}
-logAllPairsOfArray2(boxes)
+};
+logAllPairsOfArray2(boxes);
 ```
 * O(2^n) Exponential - recursive algorithms that solves a problem of size N
-* O(n!) Factorial - you are adding a loop for every element
+  
+* O(n!) Factorial - you are adding a nested loop for every input we add
+```javascript
+const factorial = n => {
+  let num = n;
+  if (n === 0) return 1
+  for (let i = 0; i < n; i++) {
+    num = n * factorial(n - 1);
+  };
+  return num;
+};
+```
 
 Iterating through half a collection is still O(n)
 Two separate collections: O(a * b)
@@ -133,8 +152,41 @@ Outside Function call (function())
   A and B arrays nested would be O(a*b) (* for nested steps)
 * Rule 4: Drop Non-dominant terms O(n + n^2) === O(n^2)
 
-## What causes Space complexity?-
-Variables
-Data Structures
-Function Call
+## Three pillars of programming
+* Readable
+* Scalable (Big O)
+  * Speed - Time complexity
+  * Memory - Space complexity
+
+## Space complexity
+There is a trade off between Speed and Memory
+* You want more speed, you get less Memory and vice versa
+
+## What causes Space complexity?
+Adding Variables
+Adding Data Structures
+Adding Function Call
 Allocations
+
+```javascript
+//#4 Space complexity O(1)
+const array = ['hi', 'my', 'teddy'];
+array[0]; 
+array[array.length-1]
+
+//#5 Space complexity O(1)
+function boooo(n) {
+    for (let i = 0; i < n; i++) {
+        console.log('booooo');
+    }
+}
+
+// #6 Space complexity O(n)
+function arrayOfHiNTimes(n) {
+    var hiArray = [];
+    for (let i = 0; i < n; i++) {
+        hiArray[i] = 'hi';
+    }
+    return hiArray;
+}
+```
