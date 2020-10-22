@@ -3,7 +3,7 @@ Ultimate coding interview bootcamp. Get more job offers, negotiate a raise: Ever
 
 [UDEMY](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
 
-## Getting the interview
+# 1) Getting the interview
 * Resume
   * Use Keywords used in job requirements
   * Hand craft to each job opening (no spamming)
@@ -39,7 +39,7 @@ Ultimate coding interview bootcamp. Get more job offers, negotiate a raise: Ever
   * Go out for coffee with gatekeeper to pick their brain
   * Try to by-pass formalities to get your foot in the door
 
-## Big O Notation
+# 2) Big O Notation
 * Good code should be
   * Readable
   * Scalable
@@ -190,3 +190,5 @@ function arrayOfHiNTimes(n) {
     return hiArray;
 }
 ```
+
+# 3) How to solve coding Problems
