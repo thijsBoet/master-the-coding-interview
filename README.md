@@ -90,7 +90,7 @@ const findNemo = (array) => {
 }
 ```
 * O(n * (log(n)) Log Linear - usually sorting operations
-  
+
 * O(n^2) Quadratic time (squared) - every element in a collection needs to be compared to ever other element. Two
   nested loops
 ```javascript
@@ -121,7 +121,7 @@ const logAllPairsOfArray2 = (boxes) => {
 logAllPairsOfArray2(boxes);
 ```
 * O(2^n) Exponential - recursive algorithms that solves a problem of size N
-  
+
 * O(n!) Factorial - you are adding a nested loop for every input we add
 ```javascript
 const factorial = n => {
@@ -163,10 +163,10 @@ There is a trade off between Speed and Memory
 * You want more speed, you get less Memory and vice versa
 
 ## What causes Space complexity?
-Adding Variables
-Adding Data Structures
-Adding Function Call
-Allocations
+* Adding Variables
+* Adding Data Structures
+* Adding Function Call
+* Allocations
 
 ```javascript
 //#4 Space complexity O(1)
@@ -192,3 +192,8 @@ function arrayOfHiNTimes(n) {
 ```
 
 # 3) How to solve coding Problems
+## What skills interviewer is looking for?
+* Analytic Skills - How can you think through problems and analyze things?
+* Coding Skills - Do you code well, by writing clean, simple, organized, readable code?
+* Technical knowledge - Do you know the fundamentals of the job you're applying for?
+* Communication skills: Does your personality match the companies’ culture?
