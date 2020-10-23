@@ -291,14 +291,13 @@ const array2 = ['z', 'y', 'a'];
 function containsCommonItem2(arr1, arr2) {
   // loop through first array and create object where properties === items in the array
   // can we assume always 2 params?
-
   let map = {};
-  for (let i=0; i < arr1.length; i++) {
-    if(!map[arr1[i]]) {
-      const item = arr1[i];
+  arr1.forEach(letter => {
+    if(!map[letter]) {
+      const item = letter;
       map[item] = true;
     }
-  }
+  });
   // loop through second array and check if item in second array exists on created object. 
   for (let j=0; j < arr2.length; j++) {
     if (map[arr2[j]]) {
@@ -346,3 +345,52 @@ code
 * Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you
 can get a time optimization to the process. In programming, you often times can use up a little bit
 more space to get faster time
+
+# 3) Data Structures
+* Data structures are collections of data (Ways to organize data)
+* Algorithms are the steps we put in place to manipulate these collections of values.
+* Data Structures + Algorithms = Programs
+* Every data structure and algorithm has tradeoffs between Readability, Space Complexity and Time Complexity
+
+## Categories of Data structures e.g.
+* Arrays
+* Objects / Lists
+* Trees
+* Tries
+* Stacks
+* Queues
+* Hash Tables
+* Graphs
+
+## How computers store data
+* CPU
+  * Calculates
+* RAM (non-persistent memory)
+  * stores Variables
+  * Fast
+* Storage (persistent memory)
+  * stores Files
+  * Slow
+
+## Algorithms e.g
+* Sorting
+* Dynamic programming
+* BFS + DFS (Searching)
+* Recursion
+
+## Common Primitive Data types javascript
+* undefined
+* Null
+* Boolean - true/false
+* Number - 1
+* String - 'string'
+* BigInt
+* Symbol
+
+## Common Data structures to organize these Data types
+* Array - []
+* Object - {}
+* Set - ()
+* Map - [for ... of]
+* Date - new Date()
+* Almost everything containing new keyword
