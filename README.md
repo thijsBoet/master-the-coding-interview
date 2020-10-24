@@ -365,12 +365,10 @@ more space to get faster time
 ## How computers store data
 * CPU
   * Calculates
-* RAM (non-persistent memory)
+* RAM (non-persistent fast memory)
   * stores Variables
-  * Fast
-* Storage (persistent memory)
+* Storage (persistent slow memory)
   * stores Files
-  * Slow
 
 ## Algorithms e.g
 * Sorting
@@ -378,7 +376,7 @@ more space to get faster time
 * BFS + DFS (Searching)
 * Recursion
 
-## Common Primitive Data types javascript
+## Common Primitive Data types JS
 * undefined
 * Null
 * Boolean - true/false
@@ -387,10 +385,23 @@ more space to get faster time
 * BigInt
 * Symbol
 
-## Common Data structures to organize these Data types
+## Common Data structures to organize these Data types in JS
 * Array - []
 * Object - {}
 * Set - ()
 * Map - [for ... of]
 * Date - new Date()
 * Almost everything containing new keyword
+
+# 4) Arrays
+* Arrays organize values sequentially. One after another in memory. 
+* Arrays have the smallest footprint of any data structure.
+* So if all you need is some data and iterate over it, step by step, arrays are the best choice.
+
+## Big O of operations on Arrays
+* Access  - O(1)
+* Push/Pop- O(1)
+* Insert  - O(n)
+* Delete  - O(n)
+* Search  - O(n)
+
