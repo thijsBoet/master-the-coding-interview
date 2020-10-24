@@ -478,3 +478,11 @@ newArray.push('you')
 newArray.pop()
 console.log(newArray)
 ```
+* Treat String questions as Array questions using the .split() method. They are simply an Array of Letters
+
+### Reverse a String
+```javascript
+function reverse(str){
+  return str.split("").reverse().join("")
+}
+```
