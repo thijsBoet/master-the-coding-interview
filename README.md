@@ -400,8 +400,81 @@ more space to get faster time
 
 ## Big O of operations on Arrays
 * Access  - O(1)
-* Push/Pop- O(1)
+* Push/Pop - O(1)
 * Insert  - O(n)
 * Delete  - O(n)
 * Search  - O(n)
 
+## Context vs scope
+```javascript
+// global scope
+function foo(){
+  // function scope
+}
+console.log(this) // window
+// context is what is left of the dot in .this
+```
+
+## Classes in JS refresher
+```javascript
+class Player {
+  constructor(name, type) {
+    this.name = name;
+    this.type = type;
+  }
+  introduce() {
+    console.log(`Hi I am ${this.name}, I am ${this.type}`)
+  }
+}
+class Wizard extends Player {
+  constructor(name, type) {
+    super(name, type)
+  }
+  play(){
+    console.log(`Weee I'm a ${this.type}`)
+  }
+}
+// instantiation
+const wizard1 = new Wizard('Gandalf', "Healer")
+const wizard1 = new Wizard('Merlin', "Warrior")
+```
+
+## Build own Array class
+```javascript
+class MyArray {
+  constructor() {
+    this.length = 0;
+    this.data = {};
+  }
+  get(index){
+    return this.data[index]
+  }
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
+  }
+  pop(){
+    const lastItem = this.data[this.length-1];
+    delete this.data[this.length-1];
+    this.length--;
+    return lastItem;
+  }
+  delete(index) {
+    const item = this.data[index];
+    this.shiftItems(index);
+  }
+  shiftItems(index) {
+    for(let i=index; i< this.length -1; i++){
+      this.data[i] = this.data[i+1];
+    }
+    delete this.data[this.length-1];
+    this.length--;
+  }
+}
+const newArray = new MyArray();
+newArray.push('hi')
+newArray.push('you')
+newArray.pop()
+console.log(newArray)
+```
