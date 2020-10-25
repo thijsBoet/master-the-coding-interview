@@ -354,12 +354,12 @@ more space to get faster time
 
 ## Categories of Data structures e.g.
 * Arrays
+* Hash Tables
 * Objects / Lists
 * Trees
 * Tries
 * Stacks
 * Queues
-* Hash Tables
 * Graphs
 
 ## How computers store data
@@ -483,6 +483,8 @@ console.log(newArray)
 ### Reverse a String
 ```javascript
 function reverse(str){
+  // Always check inputs first
+  if (!str || str.length < 2 || typeof str !== 'string') return "Wrong input"
   return str.split("").reverse().join("")
 }
 ```
